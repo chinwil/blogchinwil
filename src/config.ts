@@ -57,6 +57,7 @@ export const profileConfig: ProfileConfig = {
 	name: "Chin Wil",
 	bio: "Chin Wil Love Xu Sunshine",
 	links: [
+		/*
 		{
 			name: "Twitter",
 			icon: "fa6-brands:twitter", // Visit https://icones.js.org/ for icon codes
@@ -64,6 +65,7 @@ export const profileConfig: ProfileConfig = {
 			// `pnpm add @iconify-json/<icon-set-name>`
 			url: "https://twitter.com",
 		},
+		*/ 
 		{
 			name: "Steam",
 			icon: "fa6-brands:steam",
