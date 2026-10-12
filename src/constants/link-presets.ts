@@ -3,14 +3,17 @@ import { i18n } from "@i18n/translation";
 import { LinkPreset, type NavBarLink } from "@/types/config";
 
 export const LinkPresets: { [key in LinkPreset]: NavBarLink } = {
+	// 主页
 	[LinkPreset.Home]: {
 		name: i18n(I18nKey.home),
 		url: "/",
 	},
+	// 关于
 	[LinkPreset.About]: {
 		name: i18n(I18nKey.about),
 		url: "/about/",
 	},
+	// 归档
 	[LinkPreset.Archive]: {
 		name: i18n(I18nKey.archive),
 		url: "/archive/",
