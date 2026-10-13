@@ -3,7 +3,7 @@ title: 从零创建自己的博客
 published: 2026-10-12
 description: create owner blog
 tags: [Blogging, Customization]
-category: Blog
+category: 极客Harbor
 blog: true
 ---
 

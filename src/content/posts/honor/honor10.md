@@ -3,7 +3,7 @@ title: Honor10 鸿蒙3.0降级EMUI10
 published: 2026-10-12
 tags: [Phone, Huawei, EMUI]
 # 分类
-category: Phone 
+category: 极客Harbor 
 # 链接
 honor10: true
 ---

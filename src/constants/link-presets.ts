@@ -18,9 +18,4 @@ export const LinkPresets: { [key in LinkPreset]: NavBarLink } = {
 		name: i18n(I18nKey.archive),
 		url: "/archive/",
 	},
-	// dongman
-	[LinkPreset.Dongman]: {
-		name: i18n(I18nKey.dongman),
-		url: "/dongman/",
-	},
 };
