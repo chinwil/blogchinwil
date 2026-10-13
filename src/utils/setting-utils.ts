@@ -54,6 +54,10 @@ export function applyThemeToDocument(theme: LIGHT_DARK_MODE) {
 export function setTheme(theme: LIGHT_DARK_MODE): void {
 	localStorage.setItem("theme", theme);
 	applyThemeToDocument(theme);
+	// 切换主题后同步更新 favicon
+	if (typeof window !== 'undefined') {
+  		window.dispatchEvent(new Event('theme-changed'));
+	}
 }
 
 export function getStoredTheme(): LIGHT_DARK_MODE {

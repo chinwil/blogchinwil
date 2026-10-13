@@ -280,10 +280,33 @@ setClickOutsideToClose("search-panel", ["search-panel", "search-bar", "search-sw
 function loadTheme() {
 	const theme = getStoredTheme()
 	setTheme(theme)
+	updateFavicon()
 }
 
 function loadHue() {
 	setHue(getHue())
+}
+
+function updateFavicon() {
+	const favicons = siteConfig.favicon;
+	if (!favicons || favicons.length === 0) return;
+
+	const isDark = document.documentElement.classList.contains('dark');
+
+	// 根据当前主题，从配置里挑一个匹配的图标（没有 theme 的就当作通用）
+	const matched = favicons.find(f => !f.theme || f.theme === (isDark ? 'dark' : 'light')) || favicons[0];
+
+	// 更新或创建 link[rel="icon"]
+	let link = document.querySelector('link[rel="icon"]');
+	if (!link) {
+		link = document.createElement('link');
+		link.setAttribute('rel', 'icon');
+		document.head.appendChild(link);
+	}
+	link.setAttribute('href', matched.src);
+	if (matched.sizes) link.setAttribute('sizes', matched.sizes);
+	// 去掉 media，否则会继续受系统偏好影响
+	link.removeAttribute('media');
 }
 
 function initCustomScrollbar() {
@@ -370,7 +393,7 @@ function init() {
 	initCustomScrollbar();
 	showBanner();
 }
-
+window.addEventListener('theme-changed', updateFavicon);
 /* Load settings when entering the site */
 init();
 
