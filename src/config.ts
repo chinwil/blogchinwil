@@ -44,6 +44,7 @@ export const navBarConfig: NavBarConfig = {
 		LinkPreset.Home,
 		LinkPreset.Archive,
 		LinkPreset.About,
+		LinkPreset.Dongman,
 		{
 			name: "bilibili",
 			url: "https://space.bilibili.com/32321292", // Internal links should not include the base path, as it is automatically added
@@ -65,7 +66,12 @@ export const profileConfig: ProfileConfig = {
 			// `pnpm add @iconify-json/<icon-set-name>`
 			url: "https://twitter.com",
 		},
-		*/ 
+		*/
+		{
+			name: "Nation",
+			icon: "circle-flags:cn",
+			url: "#",
+		}, 
 		{
 			name: "Steam",
 			icon: "fa6-brands:steam",
@@ -73,9 +79,23 @@ export const profileConfig: ProfileConfig = {
 		},
 		{
 			name: "GitHub",
-			icon: "fa6-brands:github",
-			url: "https://github.com/saicaca/fuwari",
+			icon: "iconoir:github",
+			url: "https://github.com/",
 		},
+		
+		{
+			name: "Youtube",
+			icon: "grommet-icons:youtube",
+			url: "https://www.youtube.com/",
+		},
+		
+		{
+			name: "Tictok",
+			icon: "grommet-icons:tictok",
+			url: "https://www.douyin.com/",
+		},
+		
+		
 	],
 };
 
